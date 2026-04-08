@@ -43,7 +43,7 @@ public:
                 {
                     roll = urand(1, Max_roll);
                     // TODO: this should use a asynchronous query with a callback instead of a synchronous, blocking query
-                    QueryResult result = CharacterDatabase.Query("SELECT item, quantity FROM reward_system WHERE roll = '{}'", roll);
+                    QueryResult result = WorldDatabase.Query("SELECT item, quantity FROM reward_system WHERE roll = '{}'", roll);
 
                     if (!result)
                     {
